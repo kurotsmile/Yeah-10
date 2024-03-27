@@ -1,7 +1,5 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Advertisements;
 using UnityEngine.UI;
 
 public class Game : MonoBehaviour
@@ -50,11 +48,6 @@ public class Game : MonoBehaviour
 
     [Header("Effect")]
     public GameObject[] effect_prefab;
-
-    [Header("Ads")]
-    public string id_ads_unity;
-    public string Vungle_ads_appID;
-    public string Vungle_ads_placementID;
 
     private List<Num_Row> list_row;
     private Carrot.Carrot_Box box_shop;
@@ -520,9 +513,9 @@ public class Game : MonoBehaviour
     public void sel_item_shop(string id_item_name)
     {
         if (this.box_msg_shop != null) this.box_msg_shop.close();
-        this.box_msg_shop=this.carrot.show_msg("Shop", "You can buy or watch ads to use this item", Carrot.Msg_Icon.Question);
+        this.box_msg_shop=this.carrot.Show_msg("Shop", "You can buy or watch ads to use this item", Carrot.Msg_Icon.Question);
         this.box_msg_shop.add_btn_msg("Buy",()=> act_buy_shop_item(id_item_name));
-        this.box_msg_shop.add_btn_msg("Watch ads",()=>act_ads_shop_item(id_item_name));
+        if(id_item_name!= "item_shop_5") this.box_msg_shop.add_btn_msg("Watch ads",()=>act_ads_shop_item(id_item_name));
         this.box_msg_shop.add_btn_msg("Cancel", close_msg_shop);
     }
 
