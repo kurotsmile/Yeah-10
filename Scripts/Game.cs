@@ -509,10 +509,13 @@ public class Game : MonoBehaviour
 
         if(items.name!= "item_shop_5")
         {
-            Carrot.Carrot_Box_Btn_Item btn_ads = items.create_item();
-            btn_ads.set_icon(this.sp_icon_store_ads);
-            btn_ads.set_color(this.carrot.color_highlight);
-            btn_ads.set_act(() => act_ads_shop_item(items.name));
+            if (carrot.ads.get_status_ads())
+            {
+                Carrot.Carrot_Box_Btn_Item btn_ads = items.create_item();
+                btn_ads.set_icon(this.sp_icon_store_ads);
+                btn_ads.set_color(this.carrot.color_highlight);
+                btn_ads.set_act(() => act_ads_shop_item(items.name));
+            }
         }
     }
 
