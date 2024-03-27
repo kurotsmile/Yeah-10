@@ -47,6 +47,7 @@ public class Game : MonoBehaviour
 
     [Header("Effect")]
     public GameObject[] effect_prefab;
+    public GameObject Effect_rank_scores;
 
     private List<Num_Row> list_row;
     private Carrot.Carrot_Box box_shop;
@@ -61,8 +62,12 @@ public class Game : MonoBehaviour
     void Start()
     {
         this.carrot.Load_Carrot(this.check_exit_app);
-        this.carrot.shop.onCarrotPaySuccess += this.pay_carrot_success;
+        this.carrot.shop.onCarrotPaySuccess += this.Pay_carrot_success;
         this.carrot.ads.onRewardedSuccess += this.onRewardedSuccess;
+        this.carrot.act_after_delete_all_data = this.Act_delete_all_data;
+
+        this.carrot.change_sound_click(this.sound[0].clip);
+
         this.GetComponent<Game_pad>().load_gamepad();
 
         this.rank_scores = PlayerPrefs.GetInt("rank_scores", 0);
@@ -89,6 +94,7 @@ public class Game : MonoBehaviour
         if (PlayerPrefs.GetInt("is_alert", 0) == 0) question_number.is_alert = true; else question_number.is_alert = false;
         if (PlayerPrefs.GetInt("is_effect", 0) == 0) this.is_effect = true; else this.is_effect = false;
 
+        this.carrot.clear_contain(this.tr_all_item_row_num);
         this.Add_rows();
         this.Add_rows();
         this.Add_rows();
@@ -96,6 +102,10 @@ public class Game : MonoBehaviour
 
         this.check_count_gift();
         this.show_suggest();
+
+        this.Effect_rank_scores.GetComponent<Animator>().enabled = false;
+        this.Effect_rank_scores.SetActive(false);
+        
     }
 
     private void check_exit_app()
@@ -135,27 +145,38 @@ public class Game : MonoBehaviour
             this.question_number.add_numb_obj(num_obj);
     }
 
-    public void set_pos_effect_bee_true(Vector3 pos_n1,Vector3 pos_n2)
+    public void set_pos_effect_bee_true(Vector3 pos_n1,Vector3 pos_n2,bool is_yeah_10)
     {
-        carrot.delay_function(0.6f, ()=>Effect_destroy(pos_n1, pos_n2));
+        carrot.delay_function(0.6f, ()=>Effect_destroy(pos_n1, pos_n2, is_yeah_10));
         this.obj_effect_bee_true_left.SetActive(true);
         this.obj_effect_bee_true_right.SetActive(true);
         this.obj_effect_bee_true_left.transform.position = pos_n1;
         this.obj_effect_bee_true_right.transform.position = pos_n2;
     }
 
-    private void Effect_destroy(Vector3 pos_n1,Vector3 pos_n2)
+    private void Effect_destroy(Vector3 pos_n1,Vector3 pos_n2,bool is_yeah_10)
     {
-        this.Create_effect(0, pos_n1);
-        this.Create_effect(0, pos_n2);
+        if (is_yeah_10)
+        {
+            this.play_sound(8);
+            this.Create_effect(2, pos_n1);
+            this.Create_effect(2, pos_n2);
+            add_scores_ranks(2);
+        }
+        else
+        {
+            this.play_sound(1);
+            this.Create_effect(0, pos_n1);
+            this.Create_effect(0, pos_n2);
+            add_scores_ranks(1);
+        }
     }
 
     public void stop_effect_bee_true()
     {
         this.obj_effect_bee_true_left.SetActive(false);
         this.obj_effect_bee_true_right.SetActive(false);
-        this.play_sound(1);
-        this.check_win_game();
+        this.Check_win_game();
         this.count_number_true++;
         if (this.count_number_true > 9) this.show_tool();
         this.check_count_gift();
@@ -182,6 +203,16 @@ public class Game : MonoBehaviour
         this.GetComponent<Game_pad>().set_no_gamepad_play();
         this.question_number.pause();
         Carrot.Carrot_Box box_setting=this.carrot.Create_Setting();
+
+        Carrot.Carrot_Box_Item item_shop = box_setting.create_item_of_top("item_shop");
+        item_shop.set_icon(this.sp_icon_store);
+        item_shop.set_title("Support item shop");
+        item_shop.set_tip("The store sells support items to help you progress through the game");
+        item_shop.set_act(btn_show_shop);
+        Carrot.Carrot_Box_Btn_Item btn_shop_list = item_shop.create_item();
+        btn_shop_list.set_icon(carrot.icon_carrot_buy);
+        btn_shop_list.set_color(carrot.color_highlight);
+        Destroy(btn_shop_list.GetComponent<Button>());
 
         Carrot.Carrot_Box_Item item_alert = box_setting.create_item_of_top("item_alert");
         item_alert.set_icon(this.icon_setting_alert);
@@ -326,7 +357,7 @@ public class Game : MonoBehaviour
         return is_space_true;
     }
 
-    private void check_win_game()
+    private void Check_win_game()
     {
         bool is_win = true;
         for(int i = 0; i < this.list_row.Count; i++)
@@ -453,7 +484,7 @@ public class Game : MonoBehaviour
 
         if (this.index_tool == 3) this.obj_num_tool.deactivate();
 
-        this.check_win_game();
+        this.Check_win_game();
     }
 
     private void show_tool(int index_tool=-1)
@@ -491,20 +522,20 @@ public class Game : MonoBehaviour
             shop_item.set_title(this.s_name_tool[i]);
             shop_item.set_tip(this.s_tip_tool[i]);
             shop_item.set_act(() => this.sel_item_shop(s_id_item_shop));
-            this.create_btn_for_item(shop_item);
+            this.Create_btn_for_item(shop_item);
         }
 
-        this.box_shop.set_act_before_closing(act_close_shop);
+        this.box_shop.set_act_before_closing(Act_close_shop);
         this.box_shop.update_color_table_row();
         this.box_shop.update_gamepad_cosonle_control();
     }
 
-    private void create_btn_for_item(Carrot.Carrot_Box_Item items)
+    private void Create_btn_for_item(Carrot.Carrot_Box_Item items)
     {
         Carrot.Carrot_Box_Btn_Item btn_buy=items.create_item();
         btn_buy.set_icon(this.sp_icon_store_buy);
         btn_buy.set_color(this.carrot.color_highlight);
-        btn_buy.set_act(() => act_buy_shop_item(items.name));
+        btn_buy.set_act(() => Act_buy_shop_item(items.name));
 
         if(items.name!= "item_shop_5")
         {
@@ -513,12 +544,12 @@ public class Game : MonoBehaviour
                 Carrot.Carrot_Box_Btn_Item btn_ads = items.create_item();
                 btn_ads.set_icon(this.sp_icon_store_ads);
                 btn_ads.set_color(this.carrot.color_highlight);
-                btn_ads.set_act(() => act_ads_shop_item(items.name));
+                btn_ads.set_act(() => Act_ads_shop_item(items.name));
             }
         }
     }
 
-    private void act_buy_shop_item(string id_name_item)
+    private void Act_buy_shop_item(string id_name_item)
     {
         this.s_id_item_buy_shop = id_name_item;
         this.carrot.play_sound_click();
@@ -530,14 +561,14 @@ public class Game : MonoBehaviour
             this.carrot.buy_product(1);
     }
 
-    private void act_ads_shop_item(string id_name_item)
+    private void Act_ads_shop_item(string id_name_item)
     {
         this.s_id_item_ads_shop = id_name_item;
         this.carrot.play_sound_click();
         this.carrot.ads.show_ads_Rewarded();
     }
 
-    public void act_close_shop()
+    public void Act_close_shop()
     {
         this.GetComponent<Game_pad>().set_yes_gamepad_play();
         this.question_number.unPause();
@@ -560,10 +591,10 @@ public class Game : MonoBehaviour
     {
         if (this.box_msg_shop != null) this.box_msg_shop.close();
         this.box_msg_shop=this.carrot.Show_msg("Shop", "You can buy or watch ads to use this item", Carrot.Msg_Icon.Question);
-        this.box_msg_shop.add_btn_msg("Buy",()=> act_buy_shop_item(id_item_name));
+        this.box_msg_shop.add_btn_msg("Buy",()=> Act_buy_shop_item(id_item_name));
         if (carrot.ads.get_status_ads())
         {
-            if (id_item_name != "item_shop_5") this.box_msg_shop.add_btn_msg("Watch ads", () => act_ads_shop_item(id_item_name));
+            if (id_item_name != "item_shop_5") this.box_msg_shop.add_btn_msg("Watch ads", () => Act_ads_shop_item(id_item_name));
         }
 
         this.box_msg_shop.add_btn_msg("Cancel", close_msg_shop);
@@ -608,7 +639,7 @@ public class Game : MonoBehaviour
         return this.list_row;
     }
 
-    private void pay_carrot_success(string s_id_product)
+    private void Pay_carrot_success(string s_id_product)
     {
         if (s_id_product == this.carrot.shop.get_id_by_index(1))
         {
@@ -630,15 +661,21 @@ public class Game : MonoBehaviour
         }
     }
 
-    public void add_scores_ranks()
+    public void add_scores_ranks(int score)
     {
-        this.rank_scores++; 
+        this.rank_scores+=score; 
         PlayerPrefs.SetInt("rank_scores", this.rank_scores);
         this.txt_scores_ranks.text = this.rank_scores.ToString();
         if (Random.Range(0, 5) == 1)
         {
             this.carrot.game.update_scores_player(this.rank_scores);
         }
+
+        this.Effect_rank_scores.SetActive(false);
+        this.Effect_rank_scores.SetActive(true);
+        this.Effect_rank_scores.GetComponent<Animator>().enabled = true;
+        this.Effect_rank_scores.GetComponent<Animator>().Play("Effect_scores_rank");
+        this.Effect_rank_scores.GetComponent<Text>().text = "+" + score;
     }
 
     public void btn_user()
@@ -664,4 +701,8 @@ public class Game : MonoBehaviour
         }
     }
 
+    private void Act_delete_all_data()
+    {
+        this.carrot.delay_function(2f,()=>Start());
+    }
 }

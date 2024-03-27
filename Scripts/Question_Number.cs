@@ -1,10 +1,13 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class Question_Number : MonoBehaviour
 {
+    [Header("Main")]
+    public Game game;
+
+    [Header("Question Obj")]
     public GameObject panel_alert;
     public Text txt_return_alert;
     public Text txt_timer;
@@ -26,7 +29,7 @@ public class Question_Number : MonoBehaviour
 
     public void load_data()
     {
-        this.panel_alert.SetActive(false);
+        this.restart();
     }
 
     public void restart()
@@ -86,12 +89,12 @@ public class Question_Number : MonoBehaviour
             bool true_check = false;
             if (this.n_1.row_num == this.n_2.row_num) {
                 true_check=this.n_1.check_row_true(this.n_2);
-                if (true_check == false) true_check = GameObject.FindAnyObjectByType<Game>().check_row_space_number_true(this.n_1.row_num, this.n_1.col_num, this.n_2.col_num);
+                if (true_check == false) true_check = game.check_row_space_number_true(this.n_1.row_num, this.n_1.col_num, this.n_2.col_num);
             }
 
             if (this.n_1.col_num == this.n_2.col_num){
                 true_check=this.n_1.check_col_true(this.n_2);
-                if (true_check == false) true_check = GameObject.FindAnyObjectByType<Game>().check_col_space_number_true(this.n_1.row_num, this.n_1.col_num, this.n_2.col_num);
+                if (true_check == false) true_check = game.check_col_space_number_true(this.n_1.row_num, this.n_1.col_num, this.n_2.col_num);
             }
 
             if (true_check) {
@@ -100,11 +103,11 @@ public class Question_Number : MonoBehaviour
                 else if (this.n_1.int_num == this.n_2.int_num)
                     this.show_select_true(false);
                 else
-                   StartCoroutine(reset_select_false());
+                   StartCoroutine(Reset_select_false());
             }
             else
             {
-                StartCoroutine(reset_select_false());
+                StartCoroutine(Reset_select_false());
             }
         }
     }
@@ -114,7 +117,7 @@ public class Question_Number : MonoBehaviour
         if (is_yeah_10) {
             this.img_alert.sprite = this.sp_alert_yeah_10;
             this.txt_return_alert.text = this.n_1.int_num + " + " + this.n_2.int_num + " = 10";
-            GameObject.FindAnyObjectByType<Game>().carrot.play_vibrate();
+            game.carrot.play_vibrate();
         }
         else
         {
@@ -125,13 +128,12 @@ public class Question_Number : MonoBehaviour
         this.n_1.is_show=false;
         this.n_2.is_show = false;
 
-        GameObject.FindAnyObjectByType<Game>().set_pos_effect_bee_true(this.n_1.transform.position, this.n_2.transform.position);
-        GameObject.FindAnyObjectByType<Game>().add_scores_ranks();
+        game.set_pos_effect_bee_true(this.n_1.transform.position, this.n_2.transform.position, is_yeah_10);
         if (this.is_alert) this.panel_alert.SetActive(true);
         StartCoroutine(reset_select_true());
     }
 
-    IEnumerator reset_select_false()
+    IEnumerator Reset_select_false()
     {
         yield return new WaitForSeconds(0.5f);
         this.n_1.reset();
@@ -139,7 +141,7 @@ public class Question_Number : MonoBehaviour
         this.n_1 = null;
         this.n_2 = null;
         this.count_question = 0;
-        GameObject.FindAnyObjectByType<Game>().play_sound(2);
+        game.play_sound(2);
     }
 
     IEnumerator reset_select_true()
@@ -150,7 +152,7 @@ public class Question_Number : MonoBehaviour
         this.n_1 = null;
         this.n_2 = null;
         this.count_question = 0;
-        GameObject.FindAnyObjectByType<Game>().stop_effect_bee_true();
+        game.stop_effect_bee_true();
         this.panel_alert.SetActive(false);
     }
 
