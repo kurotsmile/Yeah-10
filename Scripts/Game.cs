@@ -63,7 +63,6 @@ public class Game : MonoBehaviour
         this.carrot.Load_Carrot(this.check_exit_app);
         this.carrot.shop.onCarrotPaySuccess += this.pay_carrot_success;
         this.carrot.ads.onRewardedSuccess += this.onRewardedSuccess;
-        this.carrot.act_after_delete_all_data = this.act_delete_all_data;
         this.GetComponent<Game_pad>().load_gamepad();
 
         this.rank_scores = PlayerPrefs.GetInt("rank_scores", 0);
@@ -562,7 +561,11 @@ public class Game : MonoBehaviour
         if (this.box_msg_shop != null) this.box_msg_shop.close();
         this.box_msg_shop=this.carrot.Show_msg("Shop", "You can buy or watch ads to use this item", Carrot.Msg_Icon.Question);
         this.box_msg_shop.add_btn_msg("Buy",()=> act_buy_shop_item(id_item_name));
-        if(id_item_name!= "item_shop_5") this.box_msg_shop.add_btn_msg("Watch ads",()=>act_ads_shop_item(id_item_name));
+        if (carrot.ads.get_status_ads())
+        {
+            if (id_item_name != "item_shop_5") this.box_msg_shop.add_btn_msg("Watch ads", () => act_ads_shop_item(id_item_name));
+        }
+
         this.box_msg_shop.add_btn_msg("Cancel", close_msg_shop);
     }
 
@@ -661,8 +664,4 @@ public class Game : MonoBehaviour
         }
     }
 
-    private void act_delete_all_data()
-    {
-        this.carrot.delay_function(1f, this.Start);
-    }
 }
