@@ -43,8 +43,7 @@ public class Game : MonoBehaviour
 
     [Header("Setting")]
     public Sprite icon_setting_alert;
-    public Sprite icon_setting_alert_no;
-    public Sprite icon_setting_alert_yes;
+    public Sprite icon_setting_efect;
 
     [Header("Effect")]
     public GameObject[] effect_prefab;
@@ -52,12 +51,13 @@ public class Game : MonoBehaviour
     private List<Num_Row> list_row;
     private Carrot.Carrot_Box box_shop;
     private Carrot.Carrot_Box_Btn_Item btn_alert_view;
+    private Carrot.Carrot_Box_Btn_Item btn_effect_view;
 
     private string s_id_item_buy_shop = "";
     private string s_id_item_ads_shop = "";
     private Carrot.Carrot_Window_Msg box_msg_shop;
     private int rank_scores = 0;
-
+    private bool is_effect = true;
     void Start()
     {
         this.carrot.Load_Carrot(this.check_exit_app);
@@ -88,6 +88,7 @@ public class Game : MonoBehaviour
         else this.panel_tutorial.SetActive(false);
 
         if (PlayerPrefs.GetInt("is_alert", 0) == 0) this.question_number.is_alert = true; else this.question_number.is_alert = false;
+        if (PlayerPrefs.GetInt("is_effect", 0) == 0) this.is_effect = true; else this.is_effect = false;
 
         this.add_rows();
         this.add_rows();
@@ -127,6 +128,8 @@ public class Game : MonoBehaviour
 
     public void add_num_obj_to_question(Num_Obj num_obj)
     {
+        this.play_sound(0);
+        this.Create_effect(1, num_obj.transform.position);
         if (this.is_tool)
             this.load_effect_tool(num_obj);
         else
@@ -135,12 +138,17 @@ public class Game : MonoBehaviour
 
     public void set_pos_effect_bee_true(Vector3 pos_n1,Vector3 pos_n2)
     {
-        this.create_effect(0, pos_n1);
-        this.create_effect(0, pos_n2);
+        carrot.delay_function(0.6f, ()=>Effect_destroy(pos_n1, pos_n2));
         this.obj_effect_bee_true_left.SetActive(true);
         this.obj_effect_bee_true_right.SetActive(true);
         this.obj_effect_bee_true_left.transform.position = pos_n1;
         this.obj_effect_bee_true_right.transform.position = pos_n2;
+    }
+
+    private void Effect_destroy(Vector3 pos_n1,Vector3 pos_n2)
+    {
+        this.Create_effect(0, pos_n1);
+        this.Create_effect(0, pos_n2);
     }
 
     public void stop_effect_bee_true()
@@ -177,18 +185,31 @@ public class Game : MonoBehaviour
         Carrot.Carrot_Box box_setting=this.carrot.Create_Setting();
 
         Carrot.Carrot_Box_Item item_alert = box_setting.create_item_of_top("item_alert");
-        this.btn_alert_view=item_alert.create_item();
-        btn_alert_view.set_color(this.carrot.color_highlight);
-        if (this.question_number.is_alert)
-            btn_alert_view.set_icon(this.icon_setting_alert_yes);
-        else
-            btn_alert_view.set_icon(this.icon_setting_alert_no);
-        Destroy(btn_alert_view.GetComponent<Button>());
-
         item_alert.set_icon(this.icon_setting_alert);
         item_alert.set_title("Result dialog");
         item_alert.set_tip("Enable or disable the game results dialog after each click");
-        item_alert.set_act(btn_change_status_alert);
+        item_alert.set_act(Act_change_status_alert);
+        this.btn_alert_view=item_alert.create_item();
+        btn_alert_view.set_color(this.carrot.color_highlight);
+        if (this.question_number.is_alert)
+            btn_alert_view.set_icon(this.carrot.icon_carrot_visible_off);
+        else
+            btn_alert_view.set_icon(this.carrot.icon_carrot_visible_on);
+        Destroy(btn_alert_view.GetComponent<Button>());
+
+        Carrot.Carrot_Box_Item item_effect = box_setting.create_item_of_top("item_effect");
+        item_effect.set_icon(this.icon_setting_alert);
+        item_effect.set_title("Effect");
+        item_effect.set_tip("Enable or disable in-game effects");
+        item_effect.set_act(Act_change_status_effect);
+
+        this.btn_effect_view = item_effect.create_item();
+        btn_effect_view.set_color(this.carrot.color_highlight);
+        if (this.is_effect)
+            btn_effect_view.set_icon(this.carrot.icon_carrot_visible_off);
+        else
+            btn_effect_view.set_icon(this.carrot.icon_carrot_visible_on);
+        Destroy(btn_effect_view.GetComponent<Button>());
 
         box_setting.set_act_before_closing(act_close_setting);
         box_setting.update_color_table_row();
@@ -247,17 +268,34 @@ public class Game : MonoBehaviour
         this.play_sound();
     }
 
-    public void btn_change_status_alert()
+    private void Act_change_status_alert()
     {
         if (this.question_number.is_alert)
         {
-            if (this.btn_alert_view != null) this.btn_alert_view.set_icon(this.icon_setting_alert_no);
+            if (this.btn_alert_view != null) this.btn_alert_view.set_icon(this.carrot.icon_carrot_visible_on);
             this.question_number.is_alert = false;
             PlayerPrefs.SetInt("is_alert", 1);
         }
         else
         {
-            if (this.btn_alert_view != null) this.btn_alert_view.set_icon(this.icon_setting_alert_yes);
+            if (this.btn_alert_view != null) this.btn_alert_view.set_icon(this.carrot.icon_carrot_visible_off);
+            this.question_number.is_alert = true;
+            PlayerPrefs.SetInt("is_alert", 0);
+        }
+        this.play_sound();
+    }
+
+    private void Act_change_status_effect()
+    {
+        if (this.is_effect)
+        {
+            if (this.btn_alert_view != null) this.btn_alert_view.set_icon(this.carrot.icon_carrot_visible_on);
+            this.question_number.is_alert = false;
+            PlayerPrefs.SetInt("is_alert", 1);
+        }
+        else
+        {
+            if (this.btn_alert_view != null) this.btn_alert_view.set_icon(this.carrot.icon_carrot_visible_off);
             this.question_number.is_alert = true;
             PlayerPrefs.SetInt("is_alert", 0);
         }
@@ -601,12 +639,13 @@ public class Game : MonoBehaviour
         this.carrot.game.Show_List_Top_player();
     }
 
-    public void create_effect(int index_effect,Vector3 pos)
+    public void Create_effect(int index_effect,Vector3 pos)
     {
         GameObject obj_effect = Instantiate(this.effect_prefab[index_effect]);
         obj_effect.transform.SetParent(this.transform);
         obj_effect.transform.position = pos;
         obj_effect.transform.localScale = new Vector3(1f, 1f, 1f);
+        obj_effect.transform.localRotation = Quaternion.identity;
         Destroy(obj_effect,3f);
     }
 
