@@ -1,0 +1,620 @@
+{
+  "project_info": {
+    "project_number": "745653792874",
+    "firebase_url": "https://carrotstore-default-rtdb.firebaseio.com",
+    "project_id": "carrotstore",
+    "storage_bucket": "carrotstore.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:745653792874:android:4853c53b761a9bf028da13",
+        "android_client_info": {
+          "package_name": "com.carrot.mylover"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "745653792874-oou5v2eq2mqm8grg032qgl0hfj66tdtu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYhaodIE6KVNM2WE-WHdbC3VJyEiZS8ng"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "745653792874-4h5ib4k8qqq0g239kg31q73ibvvcphvg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:745653792874:android:a2d19ce90082398128da13",
+        "android_client_info": {
+          "package_name": "com.carrot.runwithme"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "745653792874-oou5v2eq2mqm8grg032qgl0hfj66tdtu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYhaodIE6KVNM2WE-WHdbC3VJyEiZS8ng"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "745653792874-4h5ib4k8qqq0g239kg31q73ibvvcphvg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:745653792874:android:c6470d223a8a34bf28da13",
+        "android_client_info": {
+          "package_name": "com.carrotstore.EReadNow"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "745653792874-oou5v2eq2mqm8grg032qgl0hfj66tdtu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYhaodIE6KVNM2WE-WHdbC3VJyEiZS8ng"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "745653792874-4h5ib4k8qqq0g239kg31q73ibvvcphvg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:745653792874:android:6399f58b739dcfaf28da13",
+        "android_client_info": {
+          "package_name": "com.carrotstore.ailover"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "745653792874-oou5v2eq2mqm8grg032qgl0hfj66tdtu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYhaodIE6KVNM2WE-WHdbC3VJyEiZS8ng"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "745653792874-4h5ib4k8qqq0g239kg31q73ibvvcphvg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:745653792874:android:22cce14178d42b8c28da13",
+        "android_client_info": {
+          "package_name": "com.carrotstore.bible"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "745653792874-oou5v2eq2mqm8grg032qgl0hfj66tdtu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYhaodIE6KVNM2WE-WHdbC3VJyEiZS8ng"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "745653792874-4h5ib4k8qqq0g239kg31q73ibvvcphvg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:745653792874:android:aba315d2aa4fbef228da13",
+        "android_client_info": {
+          "package_name": "com.carrotstore.carrotframework"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "745653792874-oou5v2eq2mqm8grg032qgl0hfj66tdtu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYhaodIE6KVNM2WE-WHdbC3VJyEiZS8ng"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "745653792874-4h5ib4k8qqq0g239kg31q73ibvvcphvg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:745653792874:android:f90141d45f55023928da13",
+        "android_client_info": {
+          "package_name": "com.carrotstore.coloring"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "745653792874-oou5v2eq2mqm8grg032qgl0hfj66tdtu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYhaodIE6KVNM2WE-WHdbC3VJyEiZS8ng"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "745653792874-4h5ib4k8qqq0g239kg31q73ibvvcphvg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:745653792874:android:40d7c907878d2b4528da13",
+        "android_client_info": {
+          "package_name": "com.carrotstore.cutelover"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "745653792874-oou5v2eq2mqm8grg032qgl0hfj66tdtu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYhaodIE6KVNM2WE-WHdbC3VJyEiZS8ng"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "745653792874-4h5ib4k8qqq0g239kg31q73ibvvcphvg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:745653792874:android:ea2a35e649817de928da13",
+        "android_client_info": {
+          "package_name": "com.carrotstore.gpu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "745653792874-oou5v2eq2mqm8grg032qgl0hfj66tdtu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYhaodIE6KVNM2WE-WHdbC3VJyEiZS8ng"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "745653792874-4h5ib4k8qqq0g239kg31q73ibvvcphvg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:745653792874:android:a3ec52d6f709d06428da13",
+        "android_client_info": {
+          "package_name": "com.carrotstore.happydiary"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "745653792874-oou5v2eq2mqm8grg032qgl0hfj66tdtu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYhaodIE6KVNM2WE-WHdbC3VJyEiZS8ng"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "745653792874-4h5ib4k8qqq0g239kg31q73ibvvcphvg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:745653792874:android:a396e41caa505c6c28da13",
+        "android_client_info": {
+          "package_name": "com.carrotstore.horseracing"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "745653792874-oou5v2eq2mqm8grg032qgl0hfj66tdtu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYhaodIE6KVNM2WE-WHdbC3VJyEiZS8ng"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "745653792874-4h5ib4k8qqq0g239kg31q73ibvvcphvg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:745653792874:android:37657fcc99e50ffe28da13",
+        "android_client_info": {
+          "package_name": "com.carrotstore.pickupeggs"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "745653792874-oou5v2eq2mqm8grg032qgl0hfj66tdtu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYhaodIE6KVNM2WE-WHdbC3VJyEiZS8ng"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "745653792874-4h5ib4k8qqq0g239kg31q73ibvvcphvg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:745653792874:android:23b08f96fbfd5aa628da13",
+        "android_client_info": {
+          "package_name": "com.carrotstore.pomodoro"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "745653792874-oou5v2eq2mqm8grg032qgl0hfj66tdtu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYhaodIE6KVNM2WE-WHdbC3VJyEiZS8ng"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "745653792874-4h5ib4k8qqq0g239kg31q73ibvvcphvg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:745653792874:android:c7be330c331efbd028da13",
+        "android_client_info": {
+          "package_name": "com.carrotstore.supercalculator"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "745653792874-oou5v2eq2mqm8grg032qgl0hfj66tdtu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYhaodIE6KVNM2WE-WHdbC3VJyEiZS8ng"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "745653792874-4h5ib4k8qqq0g239kg31q73ibvvcphvg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:745653792874:android:9115e0eda089b75228da13",
+        "android_client_info": {
+          "package_name": "com.carrotstore.superrecording"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "745653792874-oou5v2eq2mqm8grg032qgl0hfj66tdtu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYhaodIE6KVNM2WE-WHdbC3VJyEiZS8ng"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "745653792874-4h5ib4k8qqq0g239kg31q73ibvvcphvg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:745653792874:android:ca7dc84949ed8ae928da13",
+        "android_client_info": {
+          "package_name": "com.carrotstore.taxitimemeter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "745653792874-oou5v2eq2mqm8grg032qgl0hfj66tdtu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYhaodIE6KVNM2WE-WHdbC3VJyEiZS8ng"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "745653792874-4h5ib4k8qqq0g239kg31q73ibvvcphvg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:745653792874:android:15f81bfb17de059d28da13",
+        "android_client_info": {
+          "package_name": "com.carrotstore.tripleItems"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "745653792874-oou5v2eq2mqm8grg032qgl0hfj66tdtu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYhaodIE6KVNM2WE-WHdbC3VJyEiZS8ng"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "745653792874-4h5ib4k8qqq0g239kg31q73ibvvcphvg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:745653792874:android:8194feaedadbef8728da13",
+        "android_client_info": {
+          "package_name": "com.carrotstore.xml"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "745653792874-oou5v2eq2mqm8grg032qgl0hfj66tdtu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYhaodIE6KVNM2WE-WHdbC3VJyEiZS8ng"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "745653792874-4h5ib4k8qqq0g239kg31q73ibvvcphvg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:745653792874:android:f899cf273e8ab42728da13",
+        "android_client_info": {
+          "package_name": "com.carrotstore.yeah10"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "745653792874-oou5v2eq2mqm8grg032qgl0hfj66tdtu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYhaodIE6KVNM2WE-WHdbC3VJyEiZS8ng"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "745653792874-4h5ib4k8qqq0g239kg31q73ibvvcphvg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:745653792874:android:04df6d5488ed276528da13",
+        "android_client_info": {
+          "package_name": "com.kurotsmile.contactstore"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "745653792874-oou5v2eq2mqm8grg032qgl0hfj66tdtu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYhaodIE6KVNM2WE-WHdbC3VJyEiZS8ng"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "745653792874-4h5ib4k8qqq0g239kg31q73ibvvcphvg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:745653792874:android:d17b118781cf670728da13",
+        "android_client_info": {
+          "package_name": "com.kurotsmile.demcuu3d"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "745653792874-oou5v2eq2mqm8grg032qgl0hfj66tdtu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYhaodIE6KVNM2WE-WHdbC3VJyEiZS8ng"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "745653792874-4h5ib4k8qqq0g239kg31q73ibvvcphvg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

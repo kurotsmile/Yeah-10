@@ -17,6 +17,7 @@ public class Game : MonoBehaviour
     public AudioSource[] sound;
     private int count_number_true = 0;
     public Animator ani;
+    public IronSourceAds ads;
 
     [Header("Tool")]
     public Sprite sp_icon_store;
@@ -62,8 +63,11 @@ public class Game : MonoBehaviour
     void Start()
     {
         this.carrot.Load_Carrot(this.check_exit_app);
+        this.ads.On_Load();
         this.carrot.shop.onCarrotPaySuccess += this.Pay_carrot_success;
-        this.carrot.ads.onRewardedSuccess += this.onRewardedSuccess;
+        this.carrot.game.act_click_watch_ads_in_music_bk=this.ads.ShowRewardedVideo;
+        this.ads.onRewardedSuccess += this.carrot.game.OnRewardedSuccess;
+        this.ads.onRewardedSuccess += this.onRewardedSuccess;
         this.carrot.act_after_delete_all_data = this.Act_delete_all_data;
 
         this.carrot.change_sound_click(this.sound[0].clip);
@@ -121,7 +125,7 @@ public class Game : MonoBehaviour
     {
         this.Add_rows();
         this.play_sound();
-        this.carrot.ads.show_ads_Interstitial();
+        this.ads.show_ads_Interstitial();
     }
 
     private void Add_rows()
@@ -393,7 +397,7 @@ public class Game : MonoBehaviour
         this.play_sound();
         this.count_number_true = 0;
         this.check_count_gift();
-        this.carrot.ads.show_ads_Interstitial();
+        this.ads.show_ads_Interstitial();
         this.show_suggest();
         this.GetComponent<Game_pad>().reset_gamepad();
     }
@@ -412,7 +416,7 @@ public class Game : MonoBehaviour
         this.is_tool = true;
         this.ani.Play("Game_active_tool");
         this.play_sound();
-        this.carrot.ads.show_ads_Interstitial();
+        this.ads.show_ads_Interstitial();
     }
 
     private void Load_effect_tool(Num_Obj n)
@@ -509,7 +513,7 @@ public class Game : MonoBehaviour
         this.box_shop.set_icon(this.sp_icon_store);
 
         int leng_shop = 0;
-        if(this.carrot.ads.get_status_ads())
+        if(this.ads.get_status_ads())
             leng_shop = this.sp_icon_tool.Length;
         else
             leng_shop= this.sp_icon_tool.Length-1;
@@ -539,7 +543,7 @@ public class Game : MonoBehaviour
 
         if(items.name!= "item_shop_5")
         {
-            if (carrot.ads.get_status_ads())
+            if (this.ads.get_status_ads())
             {
                 Carrot.Carrot_Box_Btn_Item btn_ads = items.create_item();
                 btn_ads.set_icon(this.sp_icon_store_ads);
@@ -565,7 +569,7 @@ public class Game : MonoBehaviour
     {
         this.s_id_item_ads_shop = id_name_item;
         this.carrot.play_sound_click();
-        this.carrot.ads.show_ads_Rewarded();
+        this.ads.ShowRewardedVideo();
     }
 
     public void Act_close_shop()
@@ -584,7 +588,7 @@ public class Game : MonoBehaviour
         if (id_item_name == "item_shop_2") this.show_tool(2);
         if (id_item_name == "item_shop_3") this.show_tool(3);
         if (id_item_name == "item_shop_4") this.in_app_suggest();
-        if (id_item_name == "item_shop_5") this.carrot.ads.remove_ads();
+        if (id_item_name == "item_shop_5") this.ads.RemoveAds();
     }
 
     public void sel_item_shop(string id_item_name)
@@ -592,7 +596,7 @@ public class Game : MonoBehaviour
         if (this.box_msg_shop != null) this.box_msg_shop.close();
         this.box_msg_shop=this.carrot.Show_msg("Shop", "You can buy or watch ads to use this item", Carrot.Msg_Icon.Question);
         this.box_msg_shop.add_btn_msg("Buy",()=> Act_buy_shop_item(id_item_name));
-        if (carrot.ads.get_status_ads())
+        if (this.ads.get_status_ads())
         {
             if (id_item_name != "item_shop_5") this.box_msg_shop.add_btn_msg("Watch ads", () => Act_ads_shop_item(id_item_name));
         }
@@ -613,7 +617,7 @@ public class Game : MonoBehaviour
             if (this.list_row[i].suggest()) break;
         }
         this.play_sound();
-        this.carrot.ads.show_ads_Interstitial();
+        this.ads.show_ads_Interstitial();
         this.count_Suggest--;
         if (this.count_Suggest <1)
             this.obj_Button_Suggest.SetActive(false);
