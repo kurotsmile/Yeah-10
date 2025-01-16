@@ -149,6 +149,8 @@
     <Compile Include="Assets\LevelPlay\Editor\Versioning\LevelPlayNetworkManager.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\LevelPlay\Editor\ISAdMobAdapterDependencies.xml" />
+    <None Include="Assets\LevelPlay\Editor\ISUnityAdsAdapterDependencies.xml" />
     <None Include="Assets\LevelPlay\Editor\IronSourceSDKDependencies.xml" />
     <None Include="Assets\LevelPlay\Editor\Unity.LevelPlay.Editor.asmdef" />
   </ItemGroup>

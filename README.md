@@ -2,6 +2,8 @@
 
 Bee10 is a delightful and captivating puzzle game inspired by the industrious nature of bees. In this game, you'll dive into a unique grid of numbers, where your goal is to find adjacent pairs of numbers that either add up to 10 or are identical.  
 
+![screenshot](screenshot91.png)
+
 **Simple yet challenging gameplay:**  
 Begin your journey by scanning the beehive grid for adjacent number pairs. If you spot a pair whose sum equals 10, click to remove them from the grid. Doing so clears space, earns you points, and allows new numbers to appear, enabling you to continue your puzzle-solving adventure.  
 
