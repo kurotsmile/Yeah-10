@@ -234,8 +234,8 @@
     <Compile Include="Library\PackageCache\com.unity.timeline\Editor\Actions\MarkerAction.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline\Editor\Utilities\Clipboard.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline\Editor\treeview\Drawers\ClipDrawer.cs" />
-    <Compile Include="Library\PackageCache\com.unity.timeline\Editor\Manipulators\Sequence\TrackZoom.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline\Editor\Animation\BindingSelector.cs" />
+    <Compile Include="Library\PackageCache\com.unity.timeline\Editor\Manipulators\Sequence\TrackZoom.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline\Editor\Utilities\DisplayNameHelper.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline\Editor\Utilities\ObjectReferenceField.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline\Editor\Manipulators\Move\MoveItemModeMix.cs" />
@@ -277,10 +277,10 @@
     <Compile Include="Library\PackageCache\com.unity.timeline\Editor\Manipulators\Sequence\SelectAndMoveItem.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline\Editor\Recording\TimelineRecording_PlayableAsset.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline\Editor\Animation\BindingTreeViewDataSource.cs" />
-    <Compile Include="Library\PackageCache\com.unity.timeline\Editor\Signals\TreeView\SignalReceiverItem.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline\Editor\Recording\TimelineRecording_Monobehaviour.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline\Editor\Animation\CurveDataSource.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline\Editor\CustomEditors\MarkerEditor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.timeline\Editor\Signals\TreeView\SignalReceiverItem.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline\Editor\inspectors\TimelinePreferences.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline\Editor\Actions\TimelineAction.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline\Editor\Window\TimelineWindow_TimeArea.cs" />
@@ -848,6 +848,10 @@
       <HintPath>Library\PackageCache\com.unity.ext.nunit\net40\unity-custom\nunit.framework.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Google.IOSResolver">
+      <HintPath>Assets\ExternalDependencyManager\Editor\1.2.183\Google.IOSResolver.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="unityplastic">
       <HintPath>Library\PackageCache\com.unity.collab-proxy\Lib\Editor\unityplastic.dll</HintPath>
       <Private>False</Private>
@@ -858,6 +862,14 @@
     </Reference>
     <Reference Include="Unity.Plastic.Newtonsoft.Json">
       <HintPath>Library\PackageCache\com.unity.collab-proxy\Lib\Editor\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Google.PackageManagerResolver">
+      <HintPath>Assets\ExternalDependencyManager\Editor\1.2.183\Google.PackageManagerResolver.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Google.VersionHandler">
+      <HintPath>Assets\ExternalDependencyManager\Editor\Google.VersionHandler.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="log4netPlastic">
@@ -872,24 +884,12 @@
       <HintPath>Library\PackageCache\com.unity.nuget.mono-cecil\Mono.Cecil.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Google.PackageManagerResolver">
-      <HintPath>Assets\ExternalDependencyManager\Editor\1.2.183\Google.PackageManagerResolver.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Google.JarResolver">
       <HintPath>Assets\ExternalDependencyManager\Editor\1.2.183\Google.JarResolver.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Google.VersionHandler">
-      <HintPath>Assets\ExternalDependencyManager\Editor\Google.VersionHandler.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Google.VersionHandlerImpl">
       <HintPath>Assets\ExternalDependencyManager\Editor\1.2.183\Google.VersionHandlerImpl.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Google.IOSResolver">
-      <HintPath>Assets\ExternalDependencyManager\Editor\1.2.183\Google.IOSResolver.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">

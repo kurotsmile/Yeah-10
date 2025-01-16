@@ -150,8 +150,8 @@
     <Compile Include="Library\PackageCache\com.unity.purchasing\Runtime\Stores\Android\GooglePlay\GooglePlayStoreExtensions.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing\Runtime\Stores\Android\GooglePlay\AAR\GooglePurchaseService.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing\Runtime\Stores\Android\GooglePlay\AAR\Interfaces\IBillingClientStateListener.cs" />
-    <Compile Include="Library\PackageCache\com.unity.purchasing\Runtime\Stores\Util\ProductDefinitionExtensions.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing\Runtime\Stores\AppleAppStore\AppleAppStore.cs" />
+    <Compile Include="Library\PackageCache\com.unity.purchasing\Runtime\Stores\Util\ProductDefinitionExtensions.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing\Runtime\Stores\Android\GooglePlay\AAR\QueryProductDetailsService.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing\Runtime\Stores\Android\UDP\IUDPExtensions.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing\Runtime\Stores\Android\GooglePlay\AAR\Models\GoogleRetrieveProductsFailureReason.cs" />

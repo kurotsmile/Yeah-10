@@ -86,8 +86,8 @@
     <Compile Include="Assets\LevelPlay\Runtime\Platforms\Android\UnityLevelPlayInitListener.cs" />
     <Compile Include="Assets\LevelPlay\Runtime\IronSourceSegment.cs" />
     <Compile Include="Assets\LevelPlay\Runtime\Platforms\iOS\iOSBannerAd.cs" />
-    <Compile Include="Assets\LevelPlay\Runtime\Platforms\Unsupported\UnsupportedInterstitialAd.cs" />
     <Compile Include="Assets\LevelPlay\Runtime\IronSourceRewardedVideoEvents.cs" />
+    <Compile Include="Assets\LevelPlay\Runtime\Platforms\Unsupported\UnsupportedInterstitialAd.cs" />
     <Compile Include="Assets\LevelPlay\Runtime\IronSourceIAgent.cs" />
     <Compile Include="Assets\LevelPlay\Runtime\Platforms\iOS\IosInterstitialAd.cs" />
     <Compile Include="Assets\LevelPlay\Runtime\IronSourceConstants.cs" />
@@ -103,8 +103,8 @@
     <Compile Include="Assets\LevelPlay\Runtime\Platforms\Android\AndroidRewardedAd.cs" />
     <Compile Include="Assets\LevelPlay\Runtime\Platforms\Android\IronSourceImpressionDataAndroid.cs" />
     <Compile Include="Assets\LevelPlay\Runtime\IronSourceEventsDispatcher.cs" />
-    <Compile Include="Assets\LevelPlay\Runtime\Platforms\IPlatformRewardedAd.cs" />
     <Compile Include="Assets\LevelPlay\Runtime\Api\ILevelPlayRewardedAd.cs" />
+    <Compile Include="Assets\LevelPlay\Runtime\Platforms\IPlatformRewardedAd.cs" />
     <Compile Include="Assets\LevelPlay\Runtime\Platforms\Android\IUnityLevelPlayInitListener.cs" />
     <Compile Include="Assets\LevelPlay\Runtime\Api\LevelPlay.cs" />
     <Compile Include="Assets\LevelPlay\Runtime\Platforms\iOS\iOSAgent.cs" />
@@ -121,11 +121,11 @@
     <Compile Include="Assets\LevelPlay\Runtime\Api\LevelPlayBannerPosition.cs" />
     <Compile Include="Assets\LevelPlay\Runtime\IronSourceImpressionData.cs" />
     <Compile Include="Assets\LevelPlay\Runtime\Platforms\iOS\IosRewardedAdListener.cs" />
-    <Compile Include="Assets\LevelPlay\Runtime\Api\LevelPlayRewardedAd.cs" />
     <Compile Include="Assets\LevelPlay\Runtime\Platforms\Unsupported\UnsupportedBannerAd.cs" />
+    <Compile Include="Assets\LevelPlay\Runtime\Api\LevelPlayRewardedAd.cs" />
     <Compile Include="Assets\LevelPlay\Runtime\Platforms\Android\IronSourceSegmentAndroid.cs" />
-    <Compile Include="Assets\LevelPlay\Runtime\AdFormat.cs" />
     <Compile Include="Assets\LevelPlay\Runtime\Platforms\Android\IronSourceInterstitialLevelPlayAndroid.cs" />
+    <Compile Include="Assets\LevelPlay\Runtime\AdFormat.cs" />
     <Compile Include="Assets\LevelPlay\Runtime\Platforms\iOS\IosInterstitialAdListener.cs" />
     <Compile Include="Assets\LevelPlay\Runtime\Platforms\Android\IUnityRewardedAdListener.cs" />
     <Compile Include="Assets\LevelPlay\Runtime\IronSourceInterstitialEvents.cs" />
@@ -633,6 +633,10 @@
       <HintPath>Library\PackageCache\com.unity.ext.nunit\net40\unity-custom\nunit.framework.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Google.IOSResolver">
+      <HintPath>Assets\ExternalDependencyManager\Editor\1.2.183\Google.IOSResolver.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="unityplastic">
       <HintPath>Library\PackageCache\com.unity.collab-proxy\Lib\Editor\unityplastic.dll</HintPath>
       <Private>False</Private>
@@ -643,6 +647,14 @@
     </Reference>
     <Reference Include="Unity.Plastic.Newtonsoft.Json">
       <HintPath>Library\PackageCache\com.unity.collab-proxy\Lib\Editor\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Google.PackageManagerResolver">
+      <HintPath>Assets\ExternalDependencyManager\Editor\1.2.183\Google.PackageManagerResolver.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Google.VersionHandler">
+      <HintPath>Assets\ExternalDependencyManager\Editor\Google.VersionHandler.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="log4netPlastic">
@@ -657,24 +669,12 @@
       <HintPath>Library\PackageCache\com.unity.nuget.mono-cecil\Mono.Cecil.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Google.PackageManagerResolver">
-      <HintPath>Assets\ExternalDependencyManager\Editor\1.2.183\Google.PackageManagerResolver.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Google.JarResolver">
       <HintPath>Assets\ExternalDependencyManager\Editor\1.2.183\Google.JarResolver.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Google.VersionHandler">
-      <HintPath>Assets\ExternalDependencyManager\Editor\Google.VersionHandler.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Google.VersionHandlerImpl">
       <HintPath>Assets\ExternalDependencyManager\Editor\1.2.183\Google.VersionHandlerImpl.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Google.IOSResolver">
-      <HintPath>Assets\ExternalDependencyManager\Editor\1.2.183\Google.IOSResolver.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">

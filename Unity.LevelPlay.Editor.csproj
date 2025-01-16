@@ -66,8 +66,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\LevelPlay\Editor\FilePaths.cs" />
-    <Compile Include="Assets\LevelPlay\Editor\Service\IEditorServices.cs" />
     <Compile Include="Assets\LevelPlay\Editor\IronSourceDependenciesManagerConstants.cs" />
+    <Compile Include="Assets\LevelPlay\Editor\Service\IEditorServices.cs" />
     <Compile Include="Assets\LevelPlay\Editor\IAdapterSettings.cs" />
     <Compile Include="Assets\LevelPlay\Editor\IntegrationManager\UIComponents\CoreComponents\UnityPluginComponent.cs" />
     <Compile Include="Assets\LevelPlay\Editor\IntegrationManager\IntegrationManagerDownloader.cs" />
@@ -75,9 +75,9 @@
     <Compile Include="Assets\LevelPlay\Editor\IntegrationManager\UIComponents\SharedComponents\IntegrationManagerCoreHeader.cs" />
     <Compile Include="Assets\LevelPlay\Editor\IronSourceEditorCoroutines.cs" />
     <Compile Include="Assets\LevelPlay\Editor\Service\XmlDocumentFactory.cs" />
+    <Compile Include="Assets\LevelPlay\Editor\Analytics\IEditorAnalyticsSender.cs" />
     <Compile Include="Assets\LevelPlay\Editor\IntegrationManager\UIComponents\SharedComponents\IntegrationManagerMajorHeaderText.cs" />
     <Compile Include="Assets\LevelPlay\Editor\Versioning\VersionComparer.cs" />
-    <Compile Include="Assets\LevelPlay\Editor\Analytics\IEditorAnalyticsSender.cs" />
     <Compile Include="Assets\LevelPlay\Editor\IronSourceMenu.cs" />
     <Compile Include="Assets\LevelPlay\Editor\Service\IDirectoryService.cs" />
     <Compile Include="Assets\LevelPlay\Editor\Analytics\EditorSessionTracker.cs" />
@@ -90,15 +90,15 @@
     <Compile Include="Assets\LevelPlay\Editor\IntegrationManager\UIComponents\SharedComponents\NetworkBoxComponent.cs" />
     <Compile Include="Assets\LevelPlay\Editor\IntegrationManager\UIComponents\CoreComponents\LevelPlaySDKComponent.cs" />
     <Compile Include="Assets\LevelPlay\Editor\Service\EditorServices.cs" />
-    <Compile Include="Assets\LevelPlay\Editor\Service\IWebRequestService.cs" />
     <Compile Include="Assets\LevelPlay\Editor\ServicesCoreDependencyInstaller.cs" />
+    <Compile Include="Assets\LevelPlay\Editor\Service\IWebRequestService.cs" />
     <Compile Include="Assets\LevelPlay\Editor\Service\LevelPlayService.cs" />
     <Compile Include="Assets\LevelPlay\Editor\DependenciesXmlFileMigrator.cs" />
     <Compile Include="Assets\LevelPlay\Editor\IntegrationManager\IntegrationManagerUIUtils.cs" />
     <Compile Include="Assets\LevelPlay\Editor\Versioning\Adapter.cs" />
     <Compile Include="Assets\LevelPlay\Editor\Analytics\IEditorAnalyticsService.cs" />
-    <Compile Include="Assets\LevelPlay\Editor\IntegrationManager\IntegrationManagerDataUtils.cs" />
     <Compile Include="Assets\LevelPlay\Editor\Versioning\AdapterVersion.cs" />
+    <Compile Include="Assets\LevelPlay\Editor\IntegrationManager\IntegrationManagerDataUtils.cs" />
     <Compile Include="Assets\LevelPlay\Editor\Service\IXmlDocumentFactory.cs" />
     <Compile Include="Assets\LevelPlay\Editor\IronSourceMediatedNetworkSettingsInspector.cs" />
     <Compile Include="Assets\LevelPlay\Editor\IntegrationManager\UIComponents\SharedComponents\IntegrationManagerVersion.cs" />
@@ -655,6 +655,10 @@
       <HintPath>Library\PackageCache\com.unity.ext.nunit\net40\unity-custom\nunit.framework.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Google.IOSResolver">
+      <HintPath>Assets\ExternalDependencyManager\Editor\1.2.183\Google.IOSResolver.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="unityplastic">
       <HintPath>Library\PackageCache\com.unity.collab-proxy\Lib\Editor\unityplastic.dll</HintPath>
       <Private>False</Private>
@@ -665,6 +669,14 @@
     </Reference>
     <Reference Include="Unity.Plastic.Newtonsoft.Json">
       <HintPath>Library\PackageCache\com.unity.collab-proxy\Lib\Editor\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Google.PackageManagerResolver">
+      <HintPath>Assets\ExternalDependencyManager\Editor\1.2.183\Google.PackageManagerResolver.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Google.VersionHandler">
+      <HintPath>Assets\ExternalDependencyManager\Editor\Google.VersionHandler.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="log4netPlastic">
@@ -679,24 +691,12 @@
       <HintPath>Library\PackageCache\com.unity.nuget.mono-cecil\Mono.Cecil.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Google.PackageManagerResolver">
-      <HintPath>Assets\ExternalDependencyManager\Editor\1.2.183\Google.PackageManagerResolver.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Google.JarResolver">
       <HintPath>Assets\ExternalDependencyManager\Editor\1.2.183\Google.JarResolver.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Google.VersionHandler">
-      <HintPath>Assets\ExternalDependencyManager\Editor\Google.VersionHandler.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Google.VersionHandlerImpl">
       <HintPath>Assets\ExternalDependencyManager\Editor\1.2.183\Google.VersionHandlerImpl.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Google.IOSResolver">
-      <HintPath>Assets\ExternalDependencyManager\Editor\1.2.183\Google.IOSResolver.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
