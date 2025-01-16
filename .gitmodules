@@ -1,3 +1,6 @@
 [submodule "Assets/Carrot-Framework-App"]
 	path = Assets/Carrot-Framework-App
 	url = https://github.com/kurotsmile/Carrot-Framework-App.git
+[submodule "Assets/Carrot-effects-2d"]
+	path = Assets/Carrot-effects-2d
+	url = https://github.com/kurotsmile/Carrot-effects-2d.git
