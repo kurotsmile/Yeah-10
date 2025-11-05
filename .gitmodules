@@ -4,3 +4,6 @@
 [submodule "Assets/Carrot-effects-2d"]
 	path = Assets/Carrot-effects-2d
 	url = https://github.com/kurotsmile/Carrot-effects-2d.git
+[submodule "Assets/Carrot-Ads"]
+	path = Assets/Carrot-Ads
+	url = https://github.com/kurotsmile/Carrot-Ads.git
