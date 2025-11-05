@@ -837,7 +837,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 084f633bc0b5880459e1f478dac3f1f0, type: 3}
+  m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 084f633bc0b5880459e1f478dac3f1f0, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -1120,7 +1120,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: fac819f59ae26524ba00382b583dedf8, type: 3}
+  m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: fac819f59ae26524ba00382b583dedf8, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -2152,7 +2152,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: a98dc8629f09c5a46821050783ec96c8, type: 3}
+  m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: a98dc8629f09c5a46821050783ec96c8, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -3276,7 +3276,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 267e444941b473e4ba81e93435031c71, type: 3}
+  m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 267e444941b473e4ba81e93435031c71, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -6668,7 +6668,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: e917792cc22d4a44e80e24dfdc2e0740, type: 3}
+  m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: e917792cc22d4a44e80e24dfdc2e0740, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -7991,7 +7991,6 @@ GameObject:
   - component: {fileID: 430925780841599542}
   - component: {fileID: 2105287388144230485}
   - component: {fileID: 8862924265593425250}
-  - component: {fileID: 5602856679359407428}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -8116,7 +8115,7 @@ MonoBehaviour:
   - {fileID: 8254945911433871959}
   - {fileID: 6076918405299745808}
   ani: {fileID: 2105287388144230485}
-  ads: {fileID: 5602856679359407428}
+  ads: {fileID: 0}
   sp_icon_store: {fileID: 21300000, guid: 37db0ab627d4f9346934e31f95b9962f, type: 3}
   sp_icon_store_ads: {fileID: 21300000, guid: 9afe00141c4eca446807e1efdaa3c4ca, type: 3}
   sp_icon_store_buy: {fileID: 21300000, guid: 14d9cfee3bc91d74091d7370486c78f9, type: 3}
@@ -8205,24 +8204,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carrot: {fileID: 0}
---- !u!114 &5602856679359407428
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5245930863583078499}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b822a9cffcf83641a5e1c7de56fdf62, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  count_step_show_interstitial: 5
-  emplement_Ads: []
-  app_key: 20bdf695d
-  id_banner: 5xml1ylpzrwpbzon
-  id_video: 3fy0y5c91u5s2hqj
-  id_rewarded: ye1wloyy3xx9a7ya
 --- !u!1 &5319704367681539849
 GameObject:
   m_ObjectHideFlags: 0
@@ -8574,7 +8555,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: e6ebe19c5f4e80f44836ca59944f0498, type: 3}
+  m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: e6ebe19c5f4e80f44836ca59944f0498, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -9896,7 +9877,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 8e22cde7a45c31143abe0c7261e61881, type: 3}
+  m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 8e22cde7a45c31143abe0c7261e61881, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -10920,7 +10901,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 0b87fa1ed85b1044aba61589536f39ef, type: 3}
+  m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 0b87fa1ed85b1044aba61589536f39ef, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -13703,7 +13684,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6660300334446134957}
   m_HandleRect: {fileID: 3801284573798790142}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
